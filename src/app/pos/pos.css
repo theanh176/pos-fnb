@@ -142,7 +142,7 @@ button:hover {
 .box_group_item_order > * {
 	width: calc(100%);
 	border-radius: 8px;
-	padding: 0 5px;
+	padding: 14px 5px;
 	height: 80px;
 	border: 1px solid #fff;
 }
@@ -156,6 +156,71 @@ button:hover {
 .box_group_item_order > *:hover {
 	border: 1px solid #0e7490;
 }
+.box_group_item_order > *:hover > .price_order {
+	opacity: 0;
+}
+.box_group_item_order > *:hover > .add_order {
+	opacity: 1;
+}
+.price_order,
+.info_order {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.price_order {
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.info_order {
+	width: calc(100% - 306px);
+	align-items: flex-start;
+	justify-content: space-around;
+}
+.add_order {
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0;
+}
+.btn-payment,
+.btn-notifi {
+	color: white;
+	border-radius: 8px;
+	padding: 5px 10px;
+	border: none;
+	cursor: pointer;
+	color: white;
+	font-weight: 600;
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn-payment:hover,
+.btn-notifi:hover {
+	color: white !important;
+}
+.btn-payment {
+	background-color: forestgreen;
+}
+.btn-payment:hover {
+	background-color: rgb(28, 114, 28);
+}
+.btn-notifi {
+	background-color: #0e7490;
+}
+.btn-notifi:hover {
+	background-color: #0e5b70;
+}
+@media screen and (max-width: 1200px) {
+	.info_order {
+		width: calc(100% - 220px);
+	}
+	.price_order {
+		display: none;
+	}
+}
 
 @media screen and (max-width: 1320px) {
 	.box_group_item_room > *,
@@ -167,5 +232,35 @@ button:hover {
 	.box_group_item_room > *,
 	.box_group_item_menu > * {
 		width: calc(100% / 4 - 10px);
+	}
+}
+@media screen and (max-height: 700px) {
+	.box_group_item_room > *,
+	.box_group_item_menu > * {
+		height: calc(100% / 3);
+	}
+}
+@media screen and (max-height: 600px) {
+	.box_group_item_room > *,
+	.box_group_item_menu > * {
+		height: 40%;
+	}
+}
+@media screen and (max-height: 520px) {
+	.box_group_item_room > *,
+	.box_group_item_menu > * {
+		height: 50%;
+	}
+}
+@media screen and (max-height: 450px) {
+	.box_group_item_room > *,
+	.box_group_item_menu > * {
+		height: 60%;
+	}
+}
+@media screen and (max-height: 400px) {
+	.box_group_item_room > *,
+	.box_group_item_menu > * {
+		height: 80%;
 	}
 }

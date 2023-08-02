@@ -91,8 +91,8 @@ export default function Pos() {
 	}
 	return (
 		<div className="px-6 pb-8 h-full">
-			<div className="bg-transparent h-11 grid grid-cols-5 gap-4 text-[13px]">
-				<div className="h-full col-span-3 grid grid-cols-10 gap-2 px-4">
+			<div className="bg-transparent h-11 grid grid-cols-9 gap-4 text-[13px]">
+				<div className="h-full col-span-5 grid grid-cols-10 gap-2 px-4">
 					<div className="h-full col-span-3 flex items-end text-center">
 						{ButtonToolbar.map((item, index) => (
 							<div
@@ -141,7 +141,7 @@ export default function Pos() {
 						</Tooltip>
 					</div>
 				</div>
-				<div className="h-full col-span-2 grid grid-cols-10 gap-2 px-4">
+				<div className="h-full col-span-4 grid grid-cols-10 gap-2 px-4">
 					<div className="h-full col-span-4 flex items-end text-center">
 						{BillList.length < 3 ? (
 							BillList.map((item, index) => (
@@ -214,7 +214,7 @@ export default function Pos() {
 								</Dropdown>
 							</React.Fragment>
 						)}
-						<div className="mr-2 p-1">
+						<div className="mx-2 flex self-center">
 							<Tooltip title="Thêm">
 								<Button
 									shape="circle"
@@ -258,8 +258,8 @@ export default function Pos() {
 					</div>
 				</div>
 			</div>
-			<div className="bg-transparent h-[calc(100vh-76px)] grid grid-cols-5 gap-4">
-				<div className="bg-white h-[inherit] col-span-3 rounded-2xl">
+			<div className="bg-transparent h-[calc(100vh-76px)] grid grid-cols-9 gap-4">
+				<div className="bg-white h-[inherit] col-span-5 rounded-2xl">
 					{isButtonActive === 0 ? ( // Phòng ban
 						<RoomPos />
 					) : (
@@ -267,7 +267,7 @@ export default function Pos() {
 						<MenuPos />
 					)}
 				</div>
-				<div className="bg-white h-[inherit] col-span-2 rounded-2xl">
+				<div className="bg-white h-[inherit] col-span-4 rounded-2xl">
 					<OrderPos />
 				</div>
 			</div>
